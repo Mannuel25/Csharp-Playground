@@ -62,50 +62,100 @@
 //Console.WriteLine($"{42.9276378:#.0000}");
 
 //float currentHealth = 4;
-float maxHealth = 9;
+//float maxHealth = 9;
 //Console.WriteLine($"{currentHealth / maxHealth:0.0%}"); // displays "44.4%" 
 
-Console.WriteLine("Enter your score: ");
-var input = Console.ReadLine();
-int score = Convert.ToInt32(input);
-if (score <= 100 && score >= 70)
-{
-    Console.WriteLine("Your grade is A");
-}
-else if (score <= 69 && score >= 60)
-{
-    Console.WriteLine("Your grade is B");
-}
-else
-{
-    Console.WriteLine("Your grade is ZZ");
-}
+//Console.WriteLine("Enter your score: ");
+//var input = Console.ReadLine();
+//int score = Convert.ToInt32(input);
+//if (score <= 100 && score >= 70)
+//{
+//    Console.WriteLine("Your grade is A");
+//}
+//else if (score <= 69 && score >= 60)
+//{
+//    Console.WriteLine("Your grade is B");
+//}
+//else
+//{
+//    Console.WriteLine("Your grade is ZZ");
+//}
 
-if (maxHealth != 9)
-{
-    Console.WriteLine("ZZZZ");
-}
-else if (maxHealth > 2 || maxHealth > 90)
-{
-    Console.WriteLine("YYYY");
-}
+//if (maxHealth != 9)
+//{
+//    Console.WriteLine("ZZZZ");
+//}
+//else if (maxHealth > 2 || maxHealth > 90)
+//{
+//    Console.WriteLine("YYYY");
+//}
 
-// ternary operator
-string text = score > 70 ? "You've an A!" : "You didn't have an A :(";
-Console.WriteLine(text);
+//// ternary operator
+//string text = score > 70 ? "You've an A!" : "You didn't have an A :(";
+//Console.WriteLine(text);
 
 
-var user_input = Console.ReadLine();
-var menu_number = Convert.ToInt32(user_input);
-switch (menu_number)
+//var user_input = Console.ReadLine();
+//var menu_number = Convert.ToInt32(user_input);
+//switch (menu_number)
+//{
+//    case 1:
+//        Console.WriteLine("Rope costs 10 gold");
+//        break;
+//    case 2:
+//        Console.WriteLine("Torches cost 16 gold");
+//        break;
+//    default:
+//        Console.WriteLine("Invalid selection");
+//        break;
+//}
+
+int number = 6;
+//while (number >= 0){
+//    Console.WriteLine(number);
+//    number--;
+//}
+
+//do
+//{
+//    Console.WriteLine(number);
+//    number--;
+//}
+//while (number >= 0);
+
+//for (int i = 1; i <= 10; i++)
+////for (int i = 10; i >= 0; i--)
+//{
+//    Console.WriteLine(i);
+//}
+
+int[] scores = new int[11];
+//scores[0] = 9;
+//Console.WriteLine(scores[0]);
+
+for (int i = 10; i >= 1; i--)
 {
-    case 1:
-        Console.WriteLine("Rope costs 10 gold");
-        break;
-    case 2:
-        Console.WriteLine("Torches cost 16 gold");
-        break;
-    default:
-        Console.WriteLine("Invalid selection");
-        break;
+    Console.WriteLine(i);
+    scores[i] = i;
+    Console.WriteLine(scores[i]);
+
 }
+//foreach (int score in scores)
+//{
+//    Console.WriteLine("Score: " + score);
+//}
+// accessing last item
+Console.WriteLine(scores[^1]);
+
+int[] firstThreeScores = scores[0..3];
+Console.WriteLine(firstThreeScores);
+
+//int[] nums = new int[3] { 1, 2, 3 };
+//int[] nums = new int[] { 1, 2, 3 };
+//int[] nums = new[] { 1, 2, 3 };
+
+List<int> new_scores = new List<int>();
+new_scores.Add(90);
+new_scores.Add(85);
+
+Console.WriteLine(new_scores);
