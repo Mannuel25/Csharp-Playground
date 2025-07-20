@@ -44,23 +44,68 @@
 //var favorite_number = 8;
 //Console.WriteLine($"My Favorite number is {favorite_number}");
 
-var first_name = "Joe";
-var last_name = "Jesse";
-// add whitespaces before the word..
-Console.WriteLine($"First Name: {first_name,10}");
-Console.WriteLine($"Last Name: {last_name,10}");
-// add whitespaces after the word..
-Console.WriteLine($"{first_name,-20} - 1");
-Console.WriteLine($"{last_name,-20} - 2");
+//var first_name = "Joe";
+//var last_name = "Jesse";
+//// add whitespaces before the word..
+//Console.WriteLine($"First Name: {first_name,10}");
+//Console.WriteLine($"Last Name: {last_name,10}");
+//// add whitespaces after the word..
+//Console.WriteLine($"{first_name,-20} - 1");
+//Console.WriteLine($"{last_name,-20} - 2");
 
-Console.WriteLine($"{Math.PI:0.00}"); // round to 2dp
+//Console.WriteLine($"{Math.PI:0.00}"); // round to 2dp
 
-Console.WriteLine($"{42.0:0.00}");
-Console.WriteLine($"{42.9276378:002.00}");
-Console.WriteLine($"{42.9276378:0011.00}");
-Console.WriteLine($"{42.9276378:1.00}");
-Console.WriteLine($"{42.9276378:#.0000}");
+//Console.WriteLine($"{42.0:0.00}");
+//Console.WriteLine($"{42.9276378:002.00}");
+//Console.WriteLine($"{42.9276378:0011.00}");
+//Console.WriteLine($"{42.9276378:1.00}");
+//Console.WriteLine($"{42.9276378:#.0000}");
 
-float currentHealth = 4;
+//float currentHealth = 4;
 float maxHealth = 9;
-Console.WriteLine($"{currentHealth / maxHealth:0.0%}"); // displays "44.4%" 
+//Console.WriteLine($"{currentHealth / maxHealth:0.0%}"); // displays "44.4%" 
+
+Console.WriteLine("Enter your score: ");
+var input = Console.ReadLine();
+int score = Convert.ToInt32(input);
+if (score <= 100 && score >= 70)
+{
+    Console.WriteLine("Your grade is A");
+}
+else if (score <= 69 && score >= 60)
+{
+    Console.WriteLine("Your grade is B");
+}
+else
+{
+    Console.WriteLine("Your grade is ZZ");
+}
+
+if (maxHealth != 9)
+{
+    Console.WriteLine("ZZZZ");
+}
+else if (maxHealth > 2 || maxHealth > 90)
+{
+    Console.WriteLine("YYYY");
+}
+
+// ternary operator
+string text = score > 70 ? "You've an A!" : "You didn't have an A :(";
+Console.WriteLine(text);
+
+
+var user_input = Console.ReadLine();
+var menu_number = Convert.ToInt32(user_input);
+switch (menu_number)
+{
+    case 1:
+        Console.WriteLine("Rope costs 10 gold");
+        break;
+    case 2:
+        Console.WriteLine("Torches cost 16 gold");
+        break;
+    default:
+        Console.WriteLine("Invalid selection");
+        break;
+}
