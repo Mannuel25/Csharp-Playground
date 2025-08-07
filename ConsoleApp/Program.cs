@@ -110,7 +110,7 @@
 //        break;
 //}
 
-int number = 6;
+//int number = 6;
 //while (number >= 0){
 //    Console.WriteLine(number);
 //    number--;
@@ -129,33 +129,87 @@ int number = 6;
 //    Console.WriteLine(i);
 //}
 
-int[] scores = new int[11];
+//int[] scores = new int[11];
 //scores[0] = 9;
 //Console.WriteLine(scores[0]);
 
-for (int i = 10; i >= 1; i--)
-{
-    Console.WriteLine(i);
-    scores[i] = i;
-    Console.WriteLine(scores[i]);
+//for (int i = 10; i >= 1; i--)
+//{
+//    Console.WriteLine(i);
+//    scores[i] = i;
+//    Console.WriteLine(scores[i]);
 
-}
+//}
 //foreach (int score in scores)
 //{
 //    Console.WriteLine("Score: " + score);
 //}
 // accessing last item
-Console.WriteLine(scores[^1]);
+//Console.WriteLine(scores[^1]);
 
-int[] firstThreeScores = scores[0..3];
-Console.WriteLine(firstThreeScores);
+//int[] firstThreeScores = scores[0..3];
+//Console.WriteLine(firstThreeScores);
 
 //int[] nums = new int[3] { 1, 2, 3 };
 //int[] nums = new int[] { 1, 2, 3 };
 //int[] nums = new[] { 1, 2, 3 };
 
-List<int> new_scores = new List<int>();
-new_scores.Add(90);
-new_scores.Add(85);
+//List<int> new_scores = new List<int>();
+//new_scores.Add(90);
+//new_scores.Add(85);
 
-Console.WriteLine(new_scores);
+//Console.WriteLine(new_scores);
+
+//int GetNumber()
+//{
+//    Console.WriteLine("Enter a number: ");
+//    int number = Convert.ToInt32(Console.ReadLine());
+//    return number;
+
+//}
+
+//void CountNumber(int start, int end)
+//{
+//    //int number = Convert.ToInt32(Console.ReadLine());
+//    for (int i=start; i <= end; i++)
+//    {
+//        Console.WriteLine(i);
+//    }
+//}
+
+//CountNumber(20, 30);
+
+//void MultiplicationTable()
+//{ 
+//    // get number from user
+//    int number = GetNumber();
+
+//    for (int i=0; i <= number; i++)
+//    {
+//        Console.WriteLine($"{number} * {i} = {number * i}");
+//    }
+//}
+
+
+//MultiplicationTable();
+
+
+//int DoubleAndAddOne(int value) => value * 2 + 1;
+
+//int number = DoubleAndAddOne(45);
+//Console.Write(number);
+
+
+int Factorial(int number)
+{
+    //int number = 5;
+    if (number == 0 || number == 1)
+    {
+        return 1;
+    }
+    return number * Factorial(number - 1);
+}
+
+int fact = Factorial(5);
+Console.Write(fact);
+
