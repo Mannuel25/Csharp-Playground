@@ -65,6 +65,8 @@
 //float maxHealth = 9;
 //Console.WriteLine($"{currentHealth / maxHealth:0.0%}"); // displays "44.4%" 
 
+// conditional statements
+
 //Console.WriteLine("Enter your score: ");
 //var input = Console.ReadLine();
 //int score = Convert.ToInt32(input);
@@ -94,6 +96,7 @@
 //string text = score > 70 ? "You've an A!" : "You didn't have an A :(";
 //Console.WriteLine(text);
 
+// switch-case
 
 //var user_input = Console.ReadLine();
 //var menu_number = Convert.ToInt32(user_input);
@@ -160,6 +163,9 @@
 
 //Console.WriteLine(new_scores);
 
+
+// working with methods
+
 //int GetNumber()
 //{
 //    Console.WriteLine("Enter a number: ");
@@ -200,16 +206,64 @@
 //Console.Write(number);
 
 
-int Factorial(int number)
-{
-    //int number = 5;
-    if (number == 0 || number == 1)
-    {
-        return 1;
-    }
-    return number * Factorial(number - 1);
-}
+//int Factorial(int number)
+//{
+//    //int number = 5;
+//    if (number == 0 || number == 1)
+//    {
+//        return 1;
+//    }
+//    return number * Factorial(number - 1);
+//}
 
-int fact = Factorial(5);
-Console.Write(fact);
+//int fact = Factorial(5);
+//Console.Write(fact);
+
+// Enumerations
+
+using System;
+
+enum Season { Winter, Spring, Summer, Fall } // 0, 1,2,3
+enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
+enum TrafficLight { Red, Yellow, Green }
+
+
+class Program
+{
+    static void Main()
+    {
+        //Season current = Season.Summer;
+        //Console.WriteLine((int)Season.Summer);  // Outputs 2
+        //Console.WriteLine(current);
+        //if (current == Season.Spring){
+        //    Console.Write("It's Spring!");
+        //}
+        //else
+        //{
+        //    Console.Write("It's not Spring!");
+        //}
+        //Day weekday = Day.Thursday;
+        //if (weekday == Day.Saturday || weekday == Day.Sunday)
+        //{
+        //    Console.WriteLine("It's the weekend!");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("It's the weekday");
+        //}
+        TrafficLight color = TrafficLight.Green;
+        switch (color)
+        {
+            case TrafficLight.Red:
+                Console.WriteLine("Stop");
+                break;
+            case TrafficLight.Yellow:
+                Console.WriteLine("Slow down");
+                break;
+            case TrafficLight.Green:
+                Console.WriteLine("Go");
+                break;
+        }
+    }
+}
 
