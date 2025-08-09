@@ -230,6 +230,11 @@ enum TrafficLight { Red, Yellow, Green }
 
 class Program
 {
+    static void displayResults((string Name, int Points, int Level) data)
+    {
+        Console.WriteLine($"Name:{data.Name} Level:{data.Level} Score:{data.Points}");
+    }
+
     static void Main()
     {
         //Season current = Season.Summer;
@@ -251,19 +256,50 @@ class Program
         //{
         //    Console.WriteLine("It's the weekday");
         //}
-        TrafficLight color = TrafficLight.Green;
-        switch (color)
-        {
-            case TrafficLight.Red:
-                Console.WriteLine("Stop");
-                break;
-            case TrafficLight.Yellow:
-                Console.WriteLine("Slow down");
-                break;
-            case TrafficLight.Green:
-                Console.WriteLine("Go");
-                break;
-        }
+        //TrafficLight color = TrafficLight.Green;
+        //switch (color)
+        //{
+        //    case TrafficLight.Red:
+        //        Console.WriteLine("Stop");
+        //        break;
+        //    case TrafficLight.Yellow:
+        //        Console.WriteLine("Slow down");
+        //        break;
+        //    case TrafficLight.Green:
+        //        Console.WriteLine("Go");
+        //        break;
+        //}
+
+        // tuples
+        (int, int, string) score = (0, 5, "Joe");
+        Console.WriteLine(score);
+        var items = ("Book", "Car", 123);
+        Console.WriteLine($"First Item: {items.Item1}");
+        Console.WriteLine($"Second Item: {items.Item2}");
+        Console.WriteLine($"Third Item: {items.Item3}");
+
+        //(string, int, int) score1 = ("R2-D2", 12420, 15);
+        //(string, int, int) score2 = score1;
+
+        (string Name, int Points, int Level) new_score = ("Dave", 12420, 15);
+        Console.WriteLine($"Points: {new_score.Points}");
+        //displayResults(new_score);
+        string name;
+        int points;
+        int level;
+        (name, points, level) = new_score; // unpacking..
+        Console.WriteLine($"{name} reached level {level} with {points} points.");
+        (string new_name, int new_points, _) = new_score; // _ is a discard variable
+
+        (int, int) a = (1, 44);
+        (int, int) b = (1, 44);
+        Console.WriteLine(a == b);
+        Console.WriteLine(a != b);
+
+
+
+
+
     }
 }
 
